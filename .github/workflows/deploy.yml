@@ -21,6 +21,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
         
+    - name: Replace API key in files
+      run: |
+        sed -i 's/YOUR_API_KEY_HERE/${{ secrets.GOOGLE_MAPS_API_KEY }}/g' christopherscott.info/index.html
+        
     - name: Sync portfolio files to S3
       run: |
         aws s3 sync christopherscott.info/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
