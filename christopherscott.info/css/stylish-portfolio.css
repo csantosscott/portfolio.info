@@ -18,7 +18,13 @@ body {
 }
 
 .content-section {
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.content-section#portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .content-section-heading h2 {
@@ -231,12 +237,12 @@ em {
 
 video {
   height: 100%;
-  margin-bottom: 0%;
-  margin-top: 0px;
+  width: 100%;
+  margin: 0;
   position: relative;
-  max-width: 100%;
   object-fit: cover;
   object-position: 10% 10%;
+  min-height: 600px;
 }
 
 .callout h2 {
@@ -252,6 +258,12 @@ video {
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
+}
+
+.portfolio-item img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .portfolio-item .caption {
@@ -283,7 +295,7 @@ video {
 @media (min-width: 992px) {
   .portfolio-item {
     max-width: none;
-    margin: 0;
+    margin: 1rem;
   }
 
   .portfolio-item .caption {
@@ -294,9 +306,8 @@ video {
 
   .portfolio-item .caption .caption-content {
     transition: opacity 0.25s;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 0rem;
+    margin: 2rem 3rem;
+    padding: 1.5rem;
   }
 
   .portfolio-item img {
@@ -380,8 +391,9 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   background-color: #1D809F !important;
+  margin-bottom: 0;
 }
 
 .text-primary {
@@ -397,5 +409,11 @@ a:hover, a:focus, a:active {
   height: auto;
   left: 0px;
   position: absolute;
-  z-index: -1
+  z-index: -1;
+  top: 0;
+}
+
+.content-section#portfolio {
+  position: relative;
+  margin-top: 0;
 }
